@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puter Site Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.puter.com/v2/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Puter Site Manager</h1>
+        <div id="authStatus"></div>
+    </header>
+    <main>
+        <div id="actionBar">
+            <button id="newSiteBtn">Create New Site</button>
+        </div>
+        <section id="siteList">
+            <ul id="sites"></ul>
+        </section>
+        <section id="newSiteForm" class="modal">
+            <div class="modal-content">
+                <h2>Create New Site</h2>
+                <form id="createSiteForm">
+                    <label for="siteName">Site Name:</label>
+                    <input type="text" id="siteName" required>
+                    <button type="button" id="chooseDirBtn">Choose Directory</button>
+                    <div id="selectedDir"></div>
+                    <label>
+                        <input type="checkbox" id="addIndexHtml"> Add basic index.html
+                    </label>
+                    <div class="form-actions">
+                        <button type="submit">Create Site</button>
+                        <button type="button" id="cancelNewSite">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="editorDialog" class="modal">
+            <div class="modal-content">
+                <div id="editor"></div>
+                <div class="editor-buttons">
+                    <button id="saveBtn">Save</button>
+                    <button id="reloadBtn">Reload</button>
+                    <button id="closeBtn">Close</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
